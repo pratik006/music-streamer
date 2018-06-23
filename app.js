@@ -3,19 +3,26 @@ const URL = "./lib.json";
 const SEARCH_ACTIVATE_LEN = 0;
 const searchField = document.querySelector("#search");
 const viewpane = document.querySelector(".container > .albums")
+var songList;
 
 searchField.addEventListener("input", (evt) => {
     if (searchField.value.length > SEARCH_ACTIVATE_LEN) {
         const searchKey = searchField.value;
-        viewpane.innerHTML = "";
-        var html = "";
-        viewpane.innerHTML = songList.filter(song => song.toUpperCase().includes(searchKey.toUpperCase())).slice(0, 10).map(song => createCard(song)).join("");
+        searchSongs(searchKey);
     }
 });
 
-var songList;
+function play1(songDiv, song) {
+    songDiv.innerHTML = `<audio controls autoplay="">
+        <source src="${CONTEXT + encodeURI(song)}" type="audio/mpeg" />
+    </audio>`;
+}
 
 
+async function searchSongs(searchKey) {
+    viewpane.innerHTML = "";
+    viewpane.innerHTML = songList.filter(song => song.toUpperCase().includes(searchKey.toUpperCase())).slice(0, 10).map(song => createCard(song)).join("");
+}
 
 (function() {
     console.log("init");
@@ -47,9 +54,10 @@ function createCard(song) {
                 <a href="#">${song.replace("/^.*[\\\/]/", '')}</a>
                 </h4>
                 <p class="card-text"></p>
-                <audio controls>
+                <div class="player-${song}" ><button onclick="play1(this.parentElement, '${song}')";><i class="fa fa-play"></i></button></div>
+                <!--audio controls>
                     <source src="${CONTEXT + encodeURI(song)}" type="audio/mpeg" />
-                </audio>
+                </audio-->
                 <!--video controls="" autoplay="" name="media">
                     <source src="${encodeURI(song)}" type="audio/mpeg">
                 </video-->
@@ -57,4 +65,10 @@ function createCard(song) {
             </div>
         </div>
     `;
+}
+
+function play(song) {
+    return `<audio controls autoplay="">
+        <source src="${CONTEXT + encodeURI(song)}" type="audio/mpeg" />
+    </audio>`;
 }
