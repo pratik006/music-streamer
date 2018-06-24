@@ -25,42 +25,35 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#"><i class="fa fa-music"></i>&nbsp;Streamer</a>
-        <form class="navbar-form" role="search">
-          <div class="input-group add-on">
-            <input class="form-control" placeholder="Search" name="search" id="search" type="text">
-            <div id="resultResult"></div>
-            <div class="input-group-btn">
-              <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
-            </div>
-          </div>
-        </form>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+          <a class="navbar-brand" href="#"><i class="fa fa-music"></i><span class="d-none">Streamer </span></a>
+          <ul class="navbar-nav">
+            <li>
+              <form id="my-form" action="#" type="submit">
+                <div class="input-group add-on">
+                  <input class="form-control" placeholder="Search" name="search" id="search" type="text">
+                  <input type="submit" style="position: absolute; left: -9999px" tabindex="-1"/>
+                  <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                  </div>
+                  <!-- <div id="searchResult">
+                    <div id="searchResult">
+                      <p>Arijit/02 Phir Bhi Tumko Chahunga (Arijit Singh) 320Kbps.mp3</p>
+                      <p>Arijit/07 Hawayein - Jab Harry Met Sejal (Arijit) 320Kbps.mp3</p>
+                      <p>Arijit/11 Phir Bhi Tumko Chaahungi (Shraddha Kapoor) 320Kbps.mp3</p>
+                    </div>
+                  </div> -->
+                </div>
+              </form>
             </li>
           </ul>
-        </div> -->
+          
+          </div>
+        </div>
       </div>
     </nav>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container pt-2">
 
       <!-- Page Heading -->
       <!-- <h1 class="my-4">Library
@@ -117,11 +110,12 @@
     <!-- /.container -->
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer class="footer py-3 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+        <audio id="player" controls style="max-width: 100%;">
+            <source src="" type="audio/mpeg" />
+        </audio>
       </div>
-      <!-- /.container -->
     </footer>
 
     <!-- Bootstrap core JavaScript -->
