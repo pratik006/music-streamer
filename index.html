@@ -25,11 +25,20 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Music Streamer</a>
+        <a class="navbar-brand" href="#"><i class="fa fa-music"></i>&nbsp;Streamer</a>
+        <form class="navbar-form" role="search">
+          <div class="input-group add-on">
+            <input class="form-control" placeholder="Search" name="search" id="search" type="text">
+            <div id="resultResult"></div>
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+        </form>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <!-- <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
               <a class="nav-link" href="#">Home
@@ -46,7 +55,7 @@
               <a class="nav-link" href="#">Contact</a>
             </li>
           </ul>
-        </div>
+        </div> -->
       </div>
     </nav>
 
@@ -54,14 +63,22 @@
     <div class="container">
 
       <!-- Page Heading -->
-      <h1 class="my-4">Library
-        <!-- <small>Secondary Text</small> -->
+      <!-- <h1 class="my-4">Library
+        <small>Secondary Text</small>
         
-      </h1>
+      </h1> -->
       <div class="row">
         <div class="col-md-12">
           <div class="container-1">
-              <input type="search" id="search" placeholder="Search..." autofocus />
+              <!-- <input type="search" id="search" placeholder="Search..." autofocus /> -->
+              <!-- <form class="navbar-form" role="search">
+                <div class="input-group add-on">
+                  <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+                  <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                  </div>
+                </div>
+              </form> -->
           </div>
         </div>
       </div>
